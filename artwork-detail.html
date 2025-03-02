@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品詳細 - Art Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artwork-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="index.html">Art Gallery</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="index.html#gallery">ギャラリー</a></li>
+                <li><a href="index.html#artists">アーティスト</a></li>
+                <li><a href="index.html#about">サイトについて</a></li>
+                <li><a href="index.html#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="#" class="login-btn">ログイン</a>
+            <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <div class="artwork-container">
+        <div class="artwork-image">
+            <img src="https://via.placeholder.com/800x600" alt="作品タイトル" id="artwork-main-image">
+            <div class="artwork-thumbnails">
+                <img src="https://via.placeholder.com/150x100" alt="サムネイル1" class="thumbnail active">
+                <img src="https://via.placeholder.com/150x100" alt="サムネイル2" class="thumbnail">
+                <img src="https://via.placeholder.com/150x100" alt="サムネイル3" class="thumbnail">
+            </div>
+        </div>
+        <div class="artwork-info">
+            <h1 id="artwork-title">作品タイトル</h1>
+            <p class="artwork-artist">アーティスト: <a href="#" id="artist-name">作者名</a></p>
+            <p class="artwork-category">カテゴリー: <span id="artwork-category">カテゴリー名</span></p>
+            <div class="artwork-price">
+                <h2 id="artwork-price-value">¥12,000</h2>
+                <p class="price-note">送料・税込み</p>
+            </div>
+            <div class="artwork-description">
+                <h3>作品説明</h3>
+                <p id="artwork-description-text">
+                    ここに作品の詳細な説明文が入ります。アーティストのインスピレーションや作品に込めた思い、制作過程などが記載されます。
+                </p>
+            </div>
+            <div class="artwork-details">
+                <h3>詳細情報</h3>
+                <ul>
+                    <li><strong>サイズ:</strong> <span id="artwork-size">A4 (210mm × 297mm)</span></li>
+                    <li><strong>制作年:</strong> <span id="artwork-year">2025</span></li>
+                    <li><strong>素材:</strong> <span id="artwork-medium">デジタル</span></li>
+                    <li><strong>納品形態:</strong> <span id="artwork-delivery">高品質プリント</span></li>
+                </ul>
+            </div>
+            <div class="purchase-options">
+                <div class="quantity-selector">
+                    <label for="quantity">数量:</label>
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+                <button class="add-to-cart-btn">カートに追加 <i class="fas fa-cart-plus"></i></button>
+                <button class="buy-now-btn">今すぐ購入</button>
+            </div>
+            <div class="shipping-info">
+                <p><i class="fas fa-truck"></i> 通常3-5営業日以内に発送</p>
+                <p><i class="fas fa-undo"></i> 14日間返品・交換可能</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="related-artworks">
+        <h2 class="section-title">関連作品</h2>
+        <div class="related-container">
+            <!-- 関連作品は動的に生成されます -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Art Gallery</h3>
+                <p>クリエイターとアート愛好家をつなぐプラットフォーム</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>リンク</h3>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="index.html#gallery">ギャラリー</a></li>
+                    <li><a href="index.html#artists">アーティスト</a></li>
+                    <li><a href="index.html#about">サイトについて</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ヘルプ</h3>
+                <ul>
+                    <li><a href="#">よくある質問</a></li>
+                    <li><a href="#">ご利用ガイド</a></li>
+                    <li><a href="#">アーティスト登録</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">利用規約</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ニュースレター</h3>
+                <p>最新情報をお届けします</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="メールアドレス" required>
+                    <button type="submit">登録</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Art Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/artwork-detail.js"></script>
+</body>
+</html>
